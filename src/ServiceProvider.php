@@ -18,6 +18,8 @@ class ServiceProvider extends AddonServiceProvider
     {
         parent::boot();
 
+        $this->bootMiddleware();
+
 //        $this->loadViewsFrom(__DIR__ . '/../resources/views/', 'oh-dear');
 //        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'oh-dear');
 //        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'oh-dear');
@@ -31,5 +33,14 @@ class ServiceProvider extends AddonServiceProvider
 //                __DIR__ . '/../config/config.php' => config_path('statamic/oh-dear.php'),
 //            ], 'Statamic Oh Dear config file');
 //        }
+    }
+
+    protected function bootMiddleware()
+    {
+        $router = $this->app['router'];
+        $router->pushMiddlewareToGroup(
+            'web',
+            \Spatie\CookieConsent\CookieConsentMiddleware::class
+        );
     }
 }
