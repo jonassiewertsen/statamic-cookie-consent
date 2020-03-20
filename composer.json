@@ -1,0 +1,42 @@
+{
+  "name": "jonassiewertsen/statamic-cookie-consent",
+  "description": "A Statamic cookie consent wrapper for the Spatie package 'laravel-cookie-consent'",
+  "keywords": [
+    "Statamic",
+    "Addon",
+    "cookie",
+    "consent"
+  ],
+  "license": "MIT",
+  "type": "statamic-addon",
+  "autoload": {
+    "psr-4": {
+      "Jonassiewertsen\\CookieConsent\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jonas Siewertsen"
+    }
+  ],
+  "support": {
+    "email": "mail@jonassiewertsen.com"
+  },
+  "require": {
+    "php": "^7.4",
+    "illuminate/support": "6.*",
+    "statamic/cms": "3.*@beta",
+    "spatie/laravel-cookie-consent": "2.*"
+  },
+  "extra": {
+    "statamic": {
+      "name": "Statamic Cookie Consent",
+      "description": "A Statamic cookie consent wrapper for the Spatie package 'laravel-cookie-consent'"
+    },
+    "laravel": {
+      "providers": [
+        "Jonassiewertsen\\CookieConsent\\ServiceProvider"
+      ]
+    }
+  }
+}
