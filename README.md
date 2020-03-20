@@ -10,6 +10,21 @@ Pull in your package with composer
 composer require jonassiewertsen/statamic-cookie-consent
 ```
 
+## Styling
+Remember to write some nice CSS to style the consent banner.
+
+Those are the default classes
+```html
+<div class="js-cookie-consent cookie-consent">
+    <span class="cookie-consent__message">
+        Your experience on this site will be improved by allowing cookies.
+    </span>
+    <button class="js-cookie-consent-agree cookie-consent__agree">
+        Allow cookies
+    </button>
+</div>
+```
+
 ## Settings
 ### Disabling the cookie consent
 You can disable the package in your .env file
